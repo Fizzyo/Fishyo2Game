@@ -49,7 +49,7 @@ public class PowerBar : MonoBehaviour {
                 * Time.deltaTime;
         }
 
-        if (Input.GetButtonDown("Fire1") && powerBar.fillAmount >= 1f && !hook.clawScript.isFired)
+        if (FizzyoFramework.Instance.Device.ButtonDown() && powerBar.fillAmount >= 1f && !hook.clawScript.isFired)
         {
             hook.LaunchClaw();
             powerBar.fillAmount = 0f;  // power used, can't fire until recharged
